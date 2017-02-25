@@ -1,0 +1,29 @@
+<div class="container">
+<div class="page-header"style="margin-top: 10%;">Register</div>
+<form ng-submit="register.regUser(regData)">
+    <lable>Email</lable>
+    <input type="text" placeholder="email" class="form-control" ng-model="register.regData.email">
+<br>
+    <lable>Username</lable>
+    <input type="text" placeholder="username" class="form-control"ng-model="register.regData.username">
+<br>
+    <lable>Password</lable>
+    <input type="password" placeholder="Password" class="form-control"ng-model="register.regData.password">
+<br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+<br>
+<div class="jumbotron text-center"  ng-show="register.loading">
+    <span class="glyphicon glyphicon-repeat spinner"></span>
+    <p>Loading</p>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="register.successMsg">
+    <div class="alert alert-success">{{register.successMsg}}</div>
+</div>
+<br>
+<div class="row show-hide-message"  ng-show="register.errorMsg">
+    <div class="alert alert-danger">{{register.errorMsg}}</div>
+</div>
+</div>
