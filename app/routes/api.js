@@ -24,8 +24,8 @@ module.exports=function(router){
      secure: true,
     
   auth: {
-     user: 'webapps@eparampara.org',
-     pass: 'ApPs52bWeDNc69'
+     user: 'urmail',
+     pass: 'ur pass'
    }
  });
 
@@ -50,7 +50,7 @@ router.post('/users',function(req,res){
               res.json({success:false,message:"user already created"});
              }else{
            var email = {
-             from: 'webapps@eparampara.org',
+             from: 'ur mail',
              to: user.email,
              subject: 'Localhost Reset link',
              text: 'Hello ' + user.username + ', thank you for registering at localhost.com. Please click on the following link to reset http://localhost:5050/activate/' + user.temporarytoken,
@@ -119,7 +119,7 @@ router.put('/activate/:token',function(req,res){
                     }else{
 
          var email = {
-             from: 'webapps@eparampara.org',
+             from: 'ur mail',
              to: user.email,
              subject: 'Localhost Activaion link',
              text: 'Hello ' + user.username + ',Acc activate',
